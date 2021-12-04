@@ -78,25 +78,6 @@
         <!-- /.row -->
     </div>
 
-     <!-- Test CSRF Attack -->
-     <?php 
-        if(isset($_SESSION['user_token'])) {
-            ?>
-                <div class="well">
-                    <h4>Test CSRF Attack</h4>
-                    <form action="includes/csrf/confirm_csrf.php" method="post">
-                        <input type="hidden" name="hidden_token" value="<?php echo $_SESSION['user_token'] ?>">
-                        <div class="form-group">
-                            <label for="user_cookies">IP Address</label>
-                            <input name="user_cookies" id="ip_address" type="text" class="form-control" placeholder="User Cookes" value="168.0.0.6" disabled>
-                        </div>
-                        <button class="btn btn-primary" name="test_csrf" type="submit">Test</button>
-                    </form> <!-- Form Search -->
-                    <!-- /.input-group -->
-                </div>
-        <?php }
-     ?>
-
     <!-- Side Widget Well -->
     <div class="well">
         <?php include "widget.php" ?>
